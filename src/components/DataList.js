@@ -14,12 +14,14 @@ import iconform from '../firmworker.png';
 
 const DataList = () => {
 
-  const [position,setposition]=useState('');
+    const [position,setposition]=useState('');
     const [Name,setName]=useState('');
     const [Surname,setSurname]=useState('');
     const [emailUser,setEmail]=useState('');
     const [phone,setphone]=useState('');
     const [uId,setUid]=useState([]);
+    let [iserror,setMessage]=useState('');
+
     const dropmenu=[
         {
             'id':1,
@@ -45,28 +47,63 @@ const DataList = () => {
 
      var Updatedb=()=>
     {
-        var submition={name:Name,surname:Surname,Position:position,
-        email:emailUser,phone:phone,"profile_img":"default image assigned","edit": "",
-        "delete": ""};
-        fetch(`http://localhost:4000/employees/${uId}`,
-        {  
-            method: "PUT",
-            headers:{
-                "Accept":"application/json",
-                "content-Type": "application/json"},
-            body:JSON.stringify(submition)
-        }).then(response =>
+      const Poschoices=['CEO','Manager','Intern','CFO','Other'];
+      if(Surname.trim().length<1)
+      {
+        setMessage('Please input a valid surname.');
+      }
+      if(Name.trim().length<1)
+      {
+        setMessage('Please input a valid name.');
+      }
+      var re = /\S+@\S+\.\S+/;
+      if(emailUser.trim().length<1 || re.test(emailUser.trim())===false)
+      {
+        setMessage('Please input a valid email.');
+      }
+      if(position.trim().length<1)
+      {
+        setMessage('Select a valid employee position.');
+      }
+      let result = /^\d+$/.test(phone.trim());
+      if(phone.trim().length!==10 || result===false)
+      {
+        setMessage('Input valid phone umber of 10 digits.');
+      }
+      if(Poschoices.includes(position.trim())===false)
+      {
+        setMessage('Invalid manual position entered. Please Select from the given');
+      }
+
+        if(Surname.trim().length>0 && Name.trim().length>0 &&
+         (emailUser.trim().length>0 && re.test(emailUser.trim())===true)
+          && position.trim().length>0 && phone.trim().length===10 && result===true && Poschoices.includes(position.trim())===true)
+        {
+          setMessage('');
+          
+          var submition={name:Name,surname:Surname,Position:position,
+            email:emailUser,phone:phone,"profile_img":"default image assigned","edit": "",
+            "delete": ""};
+            fetch(`http://localhost:4000/employees/${uId}`,
             {  
-                if(response.status===200 && response.ok)
-                {
-                    revalidator.revalidate();
-                    setOpenModal(false);  
-                }else{
-                    console.log("Something went wrong: Status code - "+response.status);
-                }
-            }).catch((error)=>{console.log("Something went wrong: resulting error - "+error);}
-            
-        );
+                method: "PUT",
+                headers:{
+                    "Accept":"application/json",
+                    "content-Type": "application/json"},
+                body:JSON.stringify(submition)
+            }).then(response =>
+                {  
+                    if(response.status===200 && response.ok)
+                    {
+                        revalidator.revalidate();
+                        setOpenModal(false);  
+                    }else{
+                        console.log("Something went wrong: Status code - "+response.status);
+                    }
+                }).catch((error)=>{console.log("Something went wrong: resulting error - "+error);}
+                
+            );
+        }
 
     } 
   const [openModal,setOpenModal]=useState(false);
@@ -219,13 +256,11 @@ const DataList = () => {
                                               
                                           </div>
 
+                                          {iserror && <p>{iserror}</p>}
+
                                   </div>
 
-                                  {/*{dataError && dataError.errorpos && <p>{dataError.errorpos}</p>}
-                                  {dataError && dataError.errorphone && <p>{dataError.errorphone}</p>}
-                                  {dataError && dataError.errorposmanual && <p>{dataError.errorposmanual}</p>}
-                                  {dataError && dataError.errorsur && <p>{dataError.errorsur}</p>}
-                                          {dataError && dataError.errorname && <p>{dataError.errorname}</p>}*/}
+                                  
                                   
                               </div>
 

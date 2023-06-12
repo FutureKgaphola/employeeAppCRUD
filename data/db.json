@@ -1,7 +1,7 @@
 {
   "employees": [
     {
-      "name": "sammy",
+      "name": "samuel",
       "surname": "zane",
       "Position": "Intern",
       "email": "future@gmail.com",
@@ -12,7 +12,7 @@
       "id": 18
     },
     {
-      "name": "mokgadi girl",
+      "name": "mokgadi",
       "surname": "kgaphola",
       "Position": "Manager",
       "email": "mokgadi@gmail.com",
@@ -46,7 +46,7 @@
     },
     {
       "name": "future test",
-      "surname": "kgaphola",
+      "surname": "simons",
       "Position": "CEO",
       "email": "mokgadi@gmail.com",
       "phone": "0767754040",
