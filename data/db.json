@@ -1,0 +1,147 @@
+{
+  "employees": [
+    {
+      "name": "sammy",
+      "surname": "zane",
+      "Position": "Intern",
+      "email": "future@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 18
+    },
+    {
+      "name": "mokgadi girl",
+      "surname": "kgaphola",
+      "Position": "Manager",
+      "email": "mokgadi@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 21
+    },
+    {
+      "name": "mokgadi",
+      "surname": "mashanya",
+      "Position": "Intern",
+      "email": "future@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 22
+    },
+    {
+      "name": "future",
+      "surname": "kgaphola",
+      "Position": "Manager",
+      "email": "future@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 24
+    },
+    {
+      "name": "future test",
+      "surname": "kgaphola",
+      "Position": "CEO",
+      "email": "mokgadi@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 25
+    },
+    {
+      "name": "future",
+      "surname": "kgaphola",
+      "Position": "Manager",
+      "email": "mokgadi@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 26
+    },
+    {
+      "name": "future",
+      "surname": "kgaphola",
+      "Position": "Intern",
+      "email": "future@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 27
+    },
+    {
+      "name": "future k",
+      "surname": "kgaphola k",
+      "Position": "Manager",
+      "email": "mokgadi@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 28
+    },
+    {
+      "name": "real user",
+      "surname": "kgaphola",
+      "Position": "Intern",
+      "email": "mokgadi@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 29
+    },
+    {
+      "name": "future",
+      "surname": "kgaphola",
+      "Position": "erere",
+      "email": "mokgadi@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 30
+    },
+    {
+      "name": "some1",
+      "surname": "kgaphola",
+      "Position": "Manager",
+      "email": "mokgadi@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 31
+    },
+    {
+      "name": "future",
+      "surname": "kgaphola",
+      "Position": "Intern",
+      "email": "mokgadi@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 32
+    },
+    {
+      "name": "future",
+      "surname": "kgaphola",
+      "Position": "Intern",
+      "email": "mokgadi@gmail.com",
+      "phone": "0767754040",
+      "profile_img": "default image assigned",
+      "edit": "",
+      "delete": "",
+      "id": 33
+    }
+  ]
+}
